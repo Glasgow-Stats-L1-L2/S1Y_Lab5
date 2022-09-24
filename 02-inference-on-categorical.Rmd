@@ -1,0 +1,91 @@
+# Inference for Categorical Data {-}
+
+```{r graphic2, echo = FALSE, out.width = "100%", fig.cap = "Blood type, an example of Categorical Data"}
+knitr::include_graphics("images/blood-type-art.jpg")
+```
+
+The code below is an example of presenting some sort of summary of the data frame `yrbss`. Specifically, the goal is to find out how many students there are in each of the different categories for how much sleep they typically get on a school night.
+
+```{r summary, eval=FALSE}
+yrbss %>%
+    group_by(school_night_hours_sleep) %>%
+    summarize(count = n())
+```
+
+You've seen both `group_by()` and `summarize()` functions in Lab 1 but it's worth having a refresher.
+
+First, you type the name of the overall dataframe you want to look at. In this case, `yrbss`. Then group the data by one of your variables using the `group_by()` function. The hours of sleep a night variable `school_night_hours_sleep` has been chosen but you could group by whichever variable you want based on the question of interest. Then what? You want some summary, so you use the `summarize()` function. You have to give your summary a name, in this instance we called it "count" but you could in theory call it whatever you like. Finally, since we want to find the counts of how many students get different amounts of sleep, we use the `n()` function which refers to the counts.
+
+<br>
+
+### Exercise 1 {-}
+
+Adapt the code from the previous example to find out what the counts are within each category for the amount of days the students have texted while driving within the past 30 days. Look back to the **data frame** to find the name of the variable you want.
+
+`r hide("Hint")`
+Use the `group_by()` and `summarize()` functions. The variable you want to group by is called `text_while_driving_30d` in `yrbss`.
+`r unhide()`
+
+```{r ex1_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+yrbss %>%
+  group_by(text_while_driving_30d) %>%
+  summarize(count = n())
+```
+
+```{r MCQ1}
+opts_Q1 <- sample(c("6-9 of the last 30 days",
+                    "The students that didn't drive",
+                    answer = "0 of the last 30 days",
+                    "All 30 of the last 30 days."))
+```
+
+<br>
+
+**Which category has the highest count?**
+`r longmcq(opts_Q1)`
+
+`r hide("Hint")`
+Look for the highest count value from the grouped by summary.
+`r unhide()`
+
+<br>
+
+### Exercise 2 {-}
+
+Create a subset, called `no_helmet`, of the data frame `yrbss` using the code below. This subset `no_helmet` contains only the students that never wore a helmet, and a new variable `text_every_day` which is "yes" the student has texted and drove every day of the last 30 or "no" if they haven't.
+
+```{r no_helmet, echo=TRUE, eval=TRUE}
+no_helmet <- yrbss %>%
+  filter(helmet_12m == "never")
+
+no_helmet <- no_helmet %>%
+  mutate(text_every_day = ifelse(text_while_driving_30d == "30", "yes", "no"))
+```
+
+Again you've seen the `filter()` and `mutate()` functions in Lab 1.
+
+In the first 2 lines of the above code, we use the `filter()` function to subset `yrbss` and extract only some data, based on some rule. In this case we want only the students who never wore a helmet, i.e. the students for whom the `helmet_12m` variable equals "never". We stored this new subset of the data in the `no_helmet` object, but you could of course call it whatever you like. The `<-` basically just tells R to store this new subset in an object called "no_helmet".
+
+In the second part of the code, we create the new variable `text_every_day`. `no_helmet <- no_helmet` refers to updating the existing dataset "no_helmet" rather than creating an entirely new one. Then, (`%>%`), we use the `mutate()` function to create a new variable based on some rule and add it to the dataset `no_helmet`. The rule here is to assign "yes" for every student whom texting while driving variable equals 30 and 0 otherwise.
+
+Find the proportion of students who have texted while driving every day in the past 30 days among those who never wore helmets.
+
+`r hide("Hint")`
+We first want to `group_by()` the `text_every_day` variable just created, then count the number of students in each category and finally calculate the proportion of students for whom `text_every_day` is "yes" out of everyone who is the `no_helmet` dataset.
+`r unhide()`
+
+```{r ex2_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+no_helmet %>%
+  group_by(text_every_day) %>%
+  summarize(count = n()) %>%
+  mutate(prop=count/sum(count))
+```
+
+<br>
+
+**What percentage of students have texted while driving every day in the last 30 days, and never wore a bike helmet?** *(to 2 decimal places)*
+
+`r fitb(7.64)`%
+
+<br>
+

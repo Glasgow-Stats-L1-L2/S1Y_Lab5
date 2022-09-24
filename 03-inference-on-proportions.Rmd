@@ -1,0 +1,168 @@
+# Inference on Proportions {-}
+
+The Center for Disease Control and Prevention seeks to report the proportion of people who have texted while driving each day for the past 30 days.
+
+To do this, you can answer the question, "What proportion of people in your sample reported that they have texted while  driving each day for the past 30 days?" with a **statistic**; while the question "What proportion of people on earth have texted while driving each day for the past 30 days?" is answered with an **estimate of the parameter**.
+
+The inferential tools for estimating population proportion are analogous to those used for means in the last Lab: the confidence interval and the hypothesis test.
+
+<br>
+
+### Exercise 3 {-}
+
+Construct a confidence interval for the proportion of people who reported that they have texted while driving each day for the past 30 days.
+
+Recall <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=181" target="_blank">from page 181 of OpenIntro</a>  that the 95% Confidence Interval for a proportion is given by $$\hat{p} \pm 1.96*SE$$ where $SE = \textrm{Standard Error} = \sqrt\frac{p(1-p)}{n}$. The standard error is estimated by replacing $p$ with its estimate $\hat{p}$.
+
+Here $n$ is the sample size, 4344 in this case, and the critical value z equals 1.96 for the standard 95% confidence interval.
+
+As mentioned in the first lab, `R` can act like a calculator in the usual way, with `*` being the multiplying operator, `/` being the dividing operator and `sqrt()` being the square root operator.
+
+You have done this previously in Lab 4 to estimate the proportion of US adults who think climate change affects their local community.
+
+You can use your answer from the previous question to help you do this.
+
+`r hide("Hint")`
+First calculate an estimate `p` for the proportion of people who have texted while driving each day (look at the output from Exercise 2 for the relevant numbers). The upper and lower bounds can then be calculated as `p + 1.96*sqrt(p*(1-p)/n)` and `p - 1.96*sqrt(p*(1-p)/n)`.
+`r unhide()`
+
+```{r ex3_solution, webex.hide="Solution", echo=TRUE}
+p <- 332/(332+4012)
+
+n <- 332+4012
+
+upper.bound <- p + 1.96*sqrt(p*(1-p)/n)
+
+lower.bound <- p - 1.96*sqrt(p*(1-p)/n)
+
+lower.bound
+
+upper.bound
+```
+
+```{r MCQ2}
+opts_Q2 <- sample(c("We are 90% confident the true proportion of non-helmet wearing  students that texted while driving in all 30 of the previous 30 days is somewhere between 0.069 and 0.084.",
+                    "We are 95% confident the true proportion of non-helmet wearing  students that texted while driving in all 30 of the previous 30 days is exactly 0.076, since this is inside the confidence interval.",
+                    answer = "We are 95% confident the true proportion of non-helmet wearing  students that texted while driving in all 30 of the previous 30 days is somewhere between 0.069 and 0.084.",
+                    "The proportion we  calculated in outside of the interval calculated here, therefore we cannot make any valid interpretations."))
+```
+
+<br>
+
+**What could you interpret from this confidence interval?**
+`r longmcq(opts_Q2)`
+
+`r hide("Hint")`
+Look in the textbook if you need a refresher on interpreting confidence intervals.
+`r unhide()`
+
+<br>
+
+
+### Exercise 4 {-}
+
+What is the **margin of error** for the estimate of the proportion of non-helmet wearers that have texted while driving each day for the past 30 days based on this survey?
+
+Referring back to the previous question, the margin of error is simply
+
+$$ME = z*SE = z \sqrt\frac{p(1-p)}{n}$$ and for a standard 95% CI, $$= 1.96 \sqrt\frac{p(1-p)}{n}$$
+```{r margin_error}
+moe <- 1.96*sqrt(p*(1-p)/n)
+```
+
+<br>
+
+**What is the margin or error for the proportion in question?** *(to 3 decimal places)*
+
+`r fitb(round(moe, 3))`
+
+```{r, webex.hide="Hint", echo=TRUE, eval=FALSE}
+#calculate the margin of error in R using the code
+
+1.96*sqrt(p*(1-p)/n)
+```
+
+<br>
+
+### Exercise 5 {-}
+
+Using the same method as seen above, repeat the process of constructing a confidence interval for the proportion of students who never wore a bike helmet and
+
+a) Had less than 5 hours sleep, then
+
+b) Strength trained every day,
+
+instead of texted while driving every day of the past 30 days. You should construct two confidence intervals, one for a) and one for b).
+
+You will need to answer the problem in two steps. Firstly, to construct a new "yes" or "no" variable, by adapting the below code and considering which variable to change and which category of that variable to change also i.e. what the `==` part equals. Secondly, you will need to construct a confidence interval in the same way as above, by working out your new $p$ and $n$ values using the same methods as before.
+
+`r hide("Hint")`
+We have already created the dataset `no_helmet` and want to mutate it to add a new variable which indicates whether a student had less than 5 hours sleep (the number of hours slept is shown by the `school_night_hours_sleep` variable). Then, count the number of "yes"'s in this new variable and use this to calculate an estimate of the proportion `p`.
+`r unhide()`
+
+```{r ex5a_solution, webex.hide="Solution (a)", echo=TRUE, eval=TRUE}
+no_helmet <- no_helmet %>%
+  mutate(less5_hours_sleep = ifelse(school_night_hours_sleep == "<5", "yes", "no"))
+
+no_helmet %>%
+  group_by(less5_hours_sleep) %>%
+  summarize(count = n())
+
+p <- 322/(322+4022)
+
+n <- 322+4022
+
+upper.bound <- p + 1.96*sqrt(p*(1-p)/n)
+
+lower.bound <- p - 1.96*sqrt(p*(1-p)/n)
+
+lower.bound
+
+upper.bound
+```
+
+<br>
+
+`r hide("Hint")`
+Within `mutate`, change the `ifelse()` statement to `ifelse(physically_active_7d==7, "yes", "no")` to create a new variable in `no_helmet` that takes the value "yes" if a student has strength trained every day for the past 7 days, and "no" otherwise.
+`r unhide()`
+
+```{r ex5b_solution, webex.hide="Solution (b)", echo=TRUE, eval=TRUE}
+no_helmet <- no_helmet %>%
+  mutate(train_every_day = ifelse(physically_active_7d==7,"yes","no"))
+
+no_helmet %>%
+  group_by(train_every_day) %>%
+  summarize(count = n())
+
+p <- 1330/(1330+3014)
+
+n <- 1330+3014
+
+upper.bound <- p + 1.96*sqrt(p*(1-p)/n)
+
+lower.bound <- p - 1.96*sqrt(p*(1-p)/n)
+
+lower.bound
+
+upper.bound
+```
+
+```{r MCQ3}
+opts_Q3 <- sample(c(answer = "The proportion of non helmet wearing strength trainers is probably much greater than the proportion of non-helmet wearing people with less than 5 hours sleep, since the CI is far above.",
+                    "The proportion of non-helmet wearing strength trainers probably equals the proportion of non-helmet wearing students that gets less than 5 hours sleep.",
+                    "We can make no comparisons between the two groups whatsoever at this stage of the analysis.",
+                    "The CI for the proportion of non-helmet wearing strength trainers seems far wider than the CI for the proportion of non-helmet wearing students with less than 5 hours sleep."))
+```
+
+<br>
+
+**How could you compare the two CI for proportions calculated above?**
+`r longmcq(opts_Q3)`
+
+`r hide("Hint")`
+Look at where the first proportion's CI ends compared to where the second proportion's CI begins.
+`r unhide()`
+
+<br>
+

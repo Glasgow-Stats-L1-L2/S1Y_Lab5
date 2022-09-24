@@ -1,0 +1,91 @@
+# How does the proportion affect the margin of error? {-}
+
+Imagine you've set out to survey 1000 people on two questions:
+
+- Are you at least 6-feet tall?
+
+- Are you left-handed?
+
+Since both of these sample proportions were  calculated from the same sample size, they should have the same margin of error, right? *Wrong!* While the margin of error does change with sample size, it is also affected by the proportion $p$.
+
+Think back to the formula for the standard error, also seen on <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=172" target="_blank">OpenIntro Page 172</a>: $SE = \sqrt{p(1-p)/n}$. This is then used in the formula for the margin of error for a 95% confidence interval:
+$$ ME = 1.96\times SE = 1.96\times\sqrt{p(1-p)/n} \,. $$
+Since the population proportion $p$ is in this $ME$ formula, it should make sense that the margin of error is in some way dependent on the population proportion. We can visualise this relationship between $p$ and $ME$ by creating a plot of $ME$ (on the y-axis) vs. $p$ (on the x-axis).
+
+Since sample size is irrelevant to this discussion, let's just set it to some arbitrary value ($n = 1000$) and use this value in the following calculations:
+
+```{r n-for-me-plot, eval = TRUE, echo = TRUE}
+n <- 1000
+```
+
+The first step is to create a variable `p` that can take any value between 0 and 1. We use the `seq()` function to create a sequence of possible values for $p$ from 0 to 1 with each number incremented by 0.01. This is simply to create a set of values that we will eventually plot on the x-axis. You can then create a variable for the margin of error (`ME`) associated with each of these values of `p` using the familiar approximate formula ($ME = 2 \times SE$). `
+
+```{r p-me, eval = TRUE, echo = TRUE}
+p <- seq(from = 0, to = 1, by = 0.01)
+me <- 2 * sqrt(p * (1 - p)/n)
+```
+
+Lastly, you can plot the two variables, (the proportion `p` and the margin or error `me`), against each other to reveal their relationship.
+
+```{r me-plot, eval = TRUE, echo = TRUE, fig.align="center"}
+dd <- data.frame(p = p, me = me)
+
+ggplot(data = dd, aes(x = p, y = me)) +
+  geom_line() +
+  labs(x = "Population Proportion", y = "Margin of Error")
+```
+
+```{r MCQ4}
+opts_Q4 <- sample(c(answer = "p and ME have a quadratic or parabolic relationship.",
+                    "They have a linear relationship.",
+                    "They have an inverse cubic relationship.",
+                    "p and ME do not appear to be related."))
+```
+
+<br>
+
+**How would you describe the relationship between `p` and `ME`?**
+`r longmcq(opts_Q4)`
+
+`r hide("Hint")`
+What type of graph that you will have seen in Maths at school does this remind you of?
+`r unhide()`
+
+```{r MCQ5}
+opts_Q5 <- sample(c("If we were to increase the sample size n, the range of possible values for the margin of error would decrease.",
+                    "If we lower our confidence value, say from 95% to 90%, the range of plausible values for the margin of error would decrease.",
+                    "You can work out exactly for which value of p the margin of error is maximised mathematically using differentiation.",
+                    answer = "Changing the value of n would make no difference to the graph."))
+```
+
+<br>
+
+**Select the incorrect statement about the p/me equation/graph.**
+`r longmcq(opts_Q5)`
+
+`r hide("Hint")`
+You can play around with the equation/graph on something like Desmos online if you wish.
+`r unhide()`
+
+<br>
+
+Is this the relationship you expected based on the formula $ME = 1.96\times\sqrt{p(1-p)/n} \,$ ?
+
+```{r MCQ6}
+opts_Q6 <- sample(c("ME is maximised when p = 0.33, or a third.",
+                    "ME is maximised when p = 0",
+                    "ME is maximised when p = 1",
+                    answer = "ME is maximised when p = 0.5"))
+```
+
+<br>
+
+**For a given sample size, for which value of $p$ is the margin of error ($ME$) maximized?**
+`r longmcq(opts_Q6)`
+
+`r hide("Hint")`
+Look carefully at the value on the x axis that gives the largest value on the y axis.
+`r unhide()`
+
+<br>
+

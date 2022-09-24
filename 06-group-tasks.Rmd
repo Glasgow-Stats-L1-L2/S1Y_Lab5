@@ -1,0 +1,87 @@
+# Group Tasks {-}
+
+In August of 2012, news outlets ranging from the Washington Post to the Huffington Post ran a story about the rise of atheism in America. The source for the story was a poll that asked people, “Irrespective of whether you attend a place of worship or not, would you say you are a religious person, not a religious person or a convinced atheist?” This type of question, which asks people to classify themselves in one way or another, is common in polling and generates categorical data.
+
+Load the `atheism` data set into your workspace by typing the following code in an Rscript file in your local Rstudio. Feel free to explore the data before completing the following tasks.
+
+```{r atheism, eval = TRUE, echo = TRUE}
+
+download.file("http://www.openintro.org/stat/data/atheism.RData", destfile = "atheism.RData")
+load("atheism.RData")
+```
+
+<br>
+
+**How many countries are included with the `atheism` data set?** *(Give your answer as a whole number)*
+`r fitb(57)`
+
+<br>
+
+### Task 1 {-}
+
+Create a 95% confidence interval for the proportion of Spanish people identify as "atheist" in 2005. You will first need to filter the `atheism` data set by nationality being "Spain", and then by the year 2005.
+
+<br>
+
+### Task 2 {-}
+
+Create a 95% confidence interval for the proportion of Spanish people identify as "atheist" in 2012 using the same method as before.
+
+<br>
+
+**Is there convincing evidence that Spain has seen a change in its atheism index between 2005 and 2012?**
+
+a)  The two confidence intervals overlap, therefore there is evidence of Spain seeing a change in it's atheism index
+
+b)  The two confidence intervals do not overlap, therefore there is no evidence of Spain seeing a change in it's atheism index
+
+c)  The two confidence intervals do not overlap, therefore there is evidence of Spain seeing a change in it's atheism index
+
+d)  The two confidence intervals overlap, therefore there is no evidence of Spain seeing a change in it's atheism index
+
+<br>
+
+### Task 3 {-}
+
+Repeat Tasks 1 and 2 to calculate two 95% confidence intervals for the proportion of Americans who identify as "atheist" in 2005 and in 2012.
+
+<br>
+
+**Is there convincing evidence that the USA has seen a change in its atheism index between 2005 and 2012?**
+
+a)  The two confidence intervals overlap, therefore there is no evidence of the USA seeing a change in it's atheism index
+
+b)  The two confidence intervals overlap, therefore there is evidence of the USA seeing a change in it's atheism index
+
+c)  The two confidence intervals do not overlap, therefore there is no evidence of the USA seeing a change in it's atheism index
+
+d)  The two confidence intervals do not overlap, therefore there is evidence of the USA seeing a change in it's atheism index
+
+
+<br>
+
+**If in reality there has been no change in the atheism index in *any* of the countries, in how many of the countries would you expect to detect a change (at a significance level of 0.05) simply by chance?** *(to the nearest whole number)*
+`r fitb(3)`
+
+`r hide("Hint")`
+We need to take the probability of a Type 1 error (rejecting the null hypothesis when $H_0$ is actually true) and times it by 57 (the number of countries within `atheism`). The probability of a Type 1 error is simply the significance level alpha, in this case, 0.05.
+`r unhide()`
+
+<br>
+
+### Task 4 {-}
+
+Suppose you’re hired by the local government to estimate the proportion of residents that attend a religious service on a weekly basis. According to the guidelines, the estimate must have a margin of error no greater than 1% with 95% confidence. You have no idea what to expect for $p$, so assume $p=0.5$. Use `R` as a calculator to determine how many people would you have to sample to ensure that you are within the guidelines?
+
+**Note** You don't need to use the `atheism` data set to answer this question.
+
+<br>
+
+
+
+
+
+
+
+
+

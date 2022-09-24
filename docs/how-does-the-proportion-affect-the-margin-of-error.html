@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>How does the proportion affect the margin of error? | S1Y Lab 5</title>
+  <meta name="description" content="How does the proportion affect the margin of error? | S1Y Lab 5" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="How does the proportion affect the margin of error? | S1Y Lab 5" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="How does the proportion affect the margin of error? | S1Y Lab 5" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="inference-on-proportions.html"/>
+<link rel="next" href="success-failure-condition.html"/>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="include/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#welcome-to-lab-5" id="toc-welcome-to-lab-5">Welcome to Lab 5<span></span></a>
+<ul>
+<li><a href="index.html#intended-learning-outcomes" id="toc-intended-learning-outcomes">Intended Learning Outcomes<span></span></a></li>
+<li><a href="index.html#credit-where-credit-is-due" id="toc-credit-where-credit-is-due">Credit where credit is due<span></span></a></li>
+</ul></li>
+<li><a href="data.html#data" id="toc-data">Data<span></span></a></li>
+<li><a href="inference-for-categorical-data.html#inference-for-categorical-data" id="toc-inference-for-categorical-data">Inference for Categorical Data<span></span></a>
+<ul>
+<li><a href="inference-for-categorical-data.html#exercise-1" id="toc-exercise-1">Exercise 1<span></span></a></li>
+<li><a href="inference-for-categorical-data.html#exercise-2" id="toc-exercise-2">Exercise 2<span></span></a></li>
+</ul></li>
+<li><a href="inference-on-proportions.html#inference-on-proportions" id="toc-inference-on-proportions">Inference on Proportions<span></span></a>
+<ul>
+<li><a href="inference-on-proportions.html#exercise-3" id="toc-exercise-3">Exercise 3<span></span></a></li>
+<li><a href="inference-on-proportions.html#exercise-4" id="toc-exercise-4">Exercise 4<span></span></a></li>
+<li><a href="inference-on-proportions.html#exercise-5" id="toc-exercise-5">Exercise 5<span></span></a></li>
+</ul></li>
+<li><a href="how-does-the-proportion-affect-the-margin-of-error.html#how-does-the-proportion-affect-the-margin-of-error" id="toc-how-does-the-proportion-affect-the-margin-of-error">How does the proportion affect the margin of error?<span></span></a></li>
+<li><a href="success-failure-condition.html#success-failure-condition" id="toc-success-failure-condition">Success-failure condition<span></span></a></li>
+<li><a href="group-tasks.html#group-tasks" id="toc-group-tasks">Group Tasks<span></span></a>
+<ul>
+<li><a href="group-tasks.html#task-1" id="toc-task-1">Task 1<span></span></a></li>
+<li><a href="group-tasks.html#task-2" id="toc-task-2">Task 2<span></span></a></li>
+<li><a href="group-tasks.html#task-3" id="toc-task-3">Task 3<span></span></a></li>
+<li><a href="group-tasks.html#task-4" id="toc-task-4">Task 4<span></span></a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">S1Y Lab 5</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="how-does-the-proportion-affect-the-margin-of-error" class="section level1 unnumbered hasAnchor">
+<h1>How does the proportion affect the margin of error?<a href="how-does-the-proportion-affect-the-margin-of-error.html#how-does-the-proportion-affect-the-margin-of-error" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Imagine you've set out to survey 1000 people on two questions:</p>
+<ul>
+<li><p>Are you at least 6-feet tall?</p></li>
+<li><p>Are you left-handed?</p></li>
+</ul>
+<p>Since both of these sample proportions were calculated from the same sample size, they should have the same margin of error, right? <em>Wrong!</em> While the margin of error does change with sample size, it is also affected by the proportion <span class="math inline">\(p\)</span>.</p>
+<p>Think back to the formula for the standard error, also seen on <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=172" target="_blank">OpenIntro Page 172</a>: <span class="math inline">\(SE = \sqrt{p(1-p)/n}\)</span>. This is then used in the formula for the margin of error for a 95% confidence interval:
+<span class="math display">\[ ME = 1.96\times SE = 1.96\times\sqrt{p(1-p)/n} \,. \]</span>
+Since the population proportion <span class="math inline">\(p\)</span> is in this <span class="math inline">\(ME\)</span> formula, it should make sense that the margin of error is in some way dependent on the population proportion. We can visualise this relationship between <span class="math inline">\(p\)</span> and <span class="math inline">\(ME\)</span> by creating a plot of <span class="math inline">\(ME\)</span> (on the y-axis) vs. <span class="math inline">\(p\)</span> (on the x-axis).</p>
+<p>Since sample size is irrelevant to this discussion, let's just set it to some arbitrary value (<span class="math inline">\(n = 1000\)</span>) and use this value in the following calculations:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb25-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span></code></pre></div>
+<p>The first step is to create a variable <code>p</code> that can take any value between 0 and 1. We use the <code>seq()</code> function to create a sequence of possible values for <span class="math inline">\(p\)</span> from 0 to 1 with each number incremented by 0.01. This is simply to create a set of values that we will eventually plot on the x-axis. You can then create a variable for the margin of error (<code>ME</code>) associated with each of these values of <code>p</code> using the familiar approximate formula (<span class="math inline">\(ME = 2 \times SE\)</span>). `</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb26-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
+<span id="cb26-2"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb26-2" aria-hidden="true" tabindex="-1"></a>me <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sqrt</span>(p <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p)<span class="sc">/</span>n)</span></code></pre></div>
+<p>Lastly, you can plot the two variables, (the proportion <code>p</code> and the margin or error <code>me</code>), against each other to reveal their relationship.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb27-1" aria-hidden="true" tabindex="-1"></a>dd <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">p =</span> p, <span class="at">me =</span> me)</span>
+<span id="cb27-2"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dd, <span class="fu">aes</span>(<span class="at">x =</span> p, <span class="at">y =</span> me)) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb27-5"><a href="how-does-the-proportion-affect-the-margin-of-error.html#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Population Proportion&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Margin of Error&quot;</span>)</span></code></pre></div>
+<p><img src="main_files/figure-html/me-plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br></p>
+<strong>How would you describe the relationship between <code>p</code> and <code>ME</code>?</strong>
+<div id="radio_MMQGMIYNDR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MMQGMIYNDR" value="answer"></input> <span>p and ME have a quadratic or parabolic relationship.</span></label><label><input type="radio" autocomplete="off" name="radio_MMQGMIYNDR" value=""></input> <span>p and ME do not appear to be related.</span></label><label><input type="radio" autocomplete="off" name="radio_MMQGMIYNDR" value=""></input> <span>They have an inverse cubic relationship.</span></label><label><input type="radio" autocomplete="off" name="radio_MMQGMIYNDR" value=""></input> <span>They have a linear relationship.</span></label>
+</div>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>What type of graph that you will have seen in Maths at school does this remind you of?</p>
+</div>
+<p><br></p>
+<strong>Select the incorrect statement about the p/me equation/graph.</strong>
+<div id="radio_TDMDLSMTQV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TDMDLSMTQV" value=""></input> <span>If we lower our confidence value, say from 95% to 90%, the range of plausible values for the margin of error would decrease.</span></label><label><input type="radio" autocomplete="off" name="radio_TDMDLSMTQV" value="answer"></input> <span>Changing the value of n would make no difference to the graph.</span></label><label><input type="radio" autocomplete="off" name="radio_TDMDLSMTQV" value=""></input> <span>You can work out exactly for which value of p the margin of error is maximised mathematically using differentiation.</span></label><label><input type="radio" autocomplete="off" name="radio_TDMDLSMTQV" value=""></input> <span>If we were to increase the sample size n, the range of possible values for the margin of error would decrease.</span></label>
+</div>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>You can play around with the equation/graph on something like Desmos online if you wish.</p>
+</div>
+<p><br></p>
+<p>Is this the relationship you expected based on the formula <span class="math inline">\(ME = 1.96\times\sqrt{p(1-p)/n} \,\)</span> ?</p>
+<p><br></p>
+<strong>For a given sample size, for which value of <span class="math inline">\(p\)</span> is the margin of error (<span class="math inline">\(ME\)</span>) maximized?</strong>
+<div id="radio_THOWUFAASB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_THOWUFAASB" value=""></input> <span>ME is maximised when p = 0</span></label><label><input type="radio" autocomplete="off" name="radio_THOWUFAASB" value=""></input> <span>ME is maximised when p = 1</span></label><label><input type="radio" autocomplete="off" name="radio_THOWUFAASB" value="answer"></input> <span>ME is maximised when p = 0.5</span></label><label><input type="radio" autocomplete="off" name="radio_THOWUFAASB" value=""></input> <span>ME is maximised when p = 0.33, or a third.</span></label>
+</div>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>Look carefully at the value on the x axis that gives the largest value on the y axis.</p>
+</div>
+<p><br></p>
+
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+  
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+  
+  var cl = this.classList
+  
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+  
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+  
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+  
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inference-on-proportions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="success-failure-condition.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["main.pdf", "main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

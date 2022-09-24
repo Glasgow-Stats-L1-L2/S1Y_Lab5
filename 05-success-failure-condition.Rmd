@@ -1,0 +1,107 @@
+# Success-failure condition {-}
+
+We have emphasised that you must always check conditions needed for central limit theorem to apply before making inference. For inference on proportions, the sample proportion can be assumed to be nearly normal if it is based on a random sample of independent observations and if both $np \geq 10$ and $n(1 - p) \geq 10$. This rule of
+thumb is easy enough to follow, but it makes you wonder: what's so special about the number 10?
+
+The short answer is: nothing! You could argue that you would be fine with 9 or that you really should be using 11. What is the "best" value for such a rule of thumb is, at least to some degree, arbitrary. However, when $np$ and $n(1-p)$ reaches 10 the sampling distribution is sufficiently normal to use confidence intervals and hypothesis tests that are based on that approximation.
+
+We can investigate the interplay between $n$ and $p$ and the shape of the sampling distribution by using simulations. We simulate the process of drawing a large number of samples of size $n$ from a population with a true  proportion of $p$. For each of the samples we compute $\hat{p}$ and then plot a histogram to visualise their distribution.
+
+Using the numerical and graphical summaries below, describe the sampling distribution of sample proportions at $n=100$ and $p=0.1$. Be sure to note the centre, spread, and shape.
+
+```{r plotex6, eval = TRUE, echo=FALSE, warning = FALSE, message = FALSE, fig.align="center"}
+
+plotex6data <- rnorm(n=100, mean = 0.1, sd = sqrt(0.1*(1-0.1)/100))
+
+ggplot(mapping = aes(x = plotex6data)) +
+geom_histogram(color = "white") +
+xlim(0, 0.3) +
+labs(y ="Count", x = "p-hats")
+```
+
+```{r sumphat,eval = TRUE, echo=FALSE, warning = FALSE, message = FALSE}
+summary(plotex6data)
+```
+
+```{r MCQ7}
+opts_Q7 <- sample(c("The distribution seems approximately Poisson, centred around the mean (approximately equal to p) and a relatively large spread/standard deviation since n=100 isn’t particularly large.",
+                    "The distribution seems approximately Normal, centred around n=100 and a relatively large spread/standard deviation since n=100 isn’t particularly large.",
+                    "The distribution seems approximately Binomial, centred around the median and a tiny spread/standard deviation since n=100 is huge.",
+                    answer = "The distribution seems approximately Normal, centred around the mean (approximately equal to p) and a relatively large spread/standard deviation since n=100 isn’t particularly large."))
+```
+
+<br>
+
+**Describe the sampling distribution of sample proportions at n=100 and p=0.1. Consider the centre, spread, and shape.**
+`r longmcq(opts_Q7)`
+
+`r hide("Hint")`
+Look carefully at the centre, shape and spread, comparing to the numerical summaries as well.
+`r unhide()`
+
+<br>
+
+Run the code below, changing the value of `n` to see how the sampling distribution of sample proportions varies as $n$ varies.
+
+```{r, eval=FALSE, echo=TRUE}
+p <- 0.15
+n <- 100
+
+data1 <- rnorm(n=n, mean=p, sd=sqrt(p*(1-p)/n))
+
+ggplot(mapping = aes(x = data1)) +
+  geom_histogram(color = "white") +
+  xlim(0, 0.3) +
+  labs(y ="Count", x = "p-hats")
+```
+
+```{r MCQ8}
+opts_Q8 <- sample(c(answer = "A decrease in n does not appear to affect the centre/symmetric point of the graph, however it does result in a much wider/more spread out distribution.",
+                    "There doesn't seem to be any significant effect of n on p-hat.",
+                    "An increase/decrease in n appears to shift the centre point of the distribution left/right.",
+                    "An increase in n appears to give a wider, more spread out distribution of p-hat."))
+```
+
+<br>
+
+**How does $n$ appear to affect the distribution of p-hat?**
+`r longmcq(opts_Q8)`
+
+`r hide("Hint")`
+Look carefully at the rough centre/symmetric points of the graphs, and consider the width/spread of the overall graphs.
+`r unhide()`
+
+<br>
+
+Run the code below, changing the value of `p` to see how the sampling distribution of sample proportions varies as $p$ varies.
+
+```{r, echo=TRUE, eval=FALSE}
+p <- 0.1
+n <- 100
+
+data2 <- rnorm(n=n, mean=p, sd=sqrt(p*(1-p)/n))
+
+ggplot(mapping = aes(x = data2)) +
+  geom_histogram(color = "white") +
+  xlim(0, 1) +
+  labs(y ="Count", x = "p-hats")
+```
+
+```{r MCQ9}
+opts_Q9 <- sample(c("The width/spread of the distribution also decreases as p decreases.",
+                    answer = "A decrease in p does not appear to affect the width, however the centre/symmetric point shifts.",
+                    "Increasing p shifts the centre/symmetric point of the distribution to the left.",
+                    "There doesn't seem to be any significant effect of p on p-hat."))
+```
+
+<br>
+
+**How does $p$ appear to affect the distribution of p-hat?**
+`r longmcq(opts_Q9)`
+
+`r hide("Hint")`
+Look carefully at the rough centre/symmetric points of the graphs, and consider the width/spread of the overall graph.
+`r unhide()`
+
+<br>
+

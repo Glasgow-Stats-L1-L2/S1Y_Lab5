@@ -1,0 +1,72 @@
+# Data {-}
+
+In this Lab, we will explore and visualise the data using the `tidyverse` suite of packages and perform statistical inference. 
+
+We will be looking at data from the Youth Risk Behaviour Surveillance System (YRBSS) survey, which uses data from American high school students to help discover health patterns. The dataframe is called `yrbss` and is part of the `openintro` package.  We can access the dataframe and make a version with missing values removed using this code.
+
+```{r dataframe, eval=FALSE, echo=TRUE, warning=FALSE}
+library(openintro)
+yrbss <- na.omit(yrbss) 
+```
+
+```{r dataframe_run, eval=TRUE, echo=FALSE, include=FALSE}
+library(openintro)
+yrbss <- na.omit(yrbss) 
+```
+
+<br>
+
+The dataframe `yrbss` contains 13 variables:
+
+• **age**: Age of the student.	
+
+• **gender**: Gender of the student.	 
+
+• **grade**: School grade of the student.
+
+• **hispanic**: If the student is hispanic, or not.	
+
+• **race**: Ethnicity of the student.
+
+• **height**: Height of the student, in metres.	 
+
+• **weight**: Weight of the student, in kilograms.	
+
+• **helmet_12m**: How often the student wore a helmet while riding a bike in the last 12 months.	
+
+• **text_while_driving_30d**: How many days out of the last 30 did the the student text while driving.
+
+• **physically_active_7d**: How many days out of the last 7 was the student physically active for at least an hour.
+
+• **hours_tv_per_school_day**: How many hours of TV does the student typically watch on a school night. 
+
+• **strength_training_7d**: How many days out of the last 7 did the student lift weights.
+
+• **school_night_hours_sleep**: How many hours of sleep does the student typically get on a school night?
+
+<br>
+
+First of all, it is always a good idea to look at the dataset you are working with to get a good sense of what it looks like, and the different types of data you may have, e.g. categorical or numerical.
+
+Run the code below to look at the first 6 rows of data and the structure of it.
+
+```{r str, echo=TRUE, eval=FALSE}
+head(yrbss)
+str(yrbss)
+```
+
+Recall from Lab 1, `head()` is a function where you put in it's brackets the name of the data frame, in this case `yrbss`, and it gives you the first 6 lines of that data to look at. You can press the arrows to go along and see all the variables.
+
+Again recall from Lab 1 `str()` is another function where you put the name of the data frame in the brackets, and this time it gives you the number of observations and the number of variables you have, the types of those variables e.g. "int" for an integer, "num" for a number and "chr" for a string of characters, as well as the first few values of each variable.
+
+<br>
+
+**How many observations/rows are there in the entire data set?**
+`r fitb(8351)`
+
+`r hide("Hint")`
+Look at the result of the str() function.
+`r unhide()`
+
+<br>
+
