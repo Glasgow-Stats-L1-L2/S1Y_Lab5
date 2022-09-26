@@ -35,7 +35,7 @@ knitr::write_bib(c(
 knitr::include_graphics("images/naniar.jpg")
 ```
 
-In this lab, we will investigate the ways in which the statistics from a random sample can serve to make inference and **test hypotheses** about the true parameter in the larger population. We will explore here inference methods for categorical data. Before we begin however, let's revisit the difference between categorical and numerical data.
+This lab will investigate the ways in which the statistics from a random sample can serve to make inference and **test hypotheses** about the true parameter in the larger population. We will explore here inference methods for categorical data. Before we begin however, let's revisit the difference between categorical and numerical data.
 
 **Categorical Data:** Data where an observation can belong to one of a certain fixed number of categories or groups. For example, someone's bloodtype. Your bloodtype can be one of A, B, AB or O. 
 
