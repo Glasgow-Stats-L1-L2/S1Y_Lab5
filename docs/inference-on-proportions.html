@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Inference on Proportions | S1Y Lab 5</title>
   <meta name="description" content="Inference on Proportions | S1Y Lab 5" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Inference on Proportions | S1Y Lab 5" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="inference-for-categorical-data.html"/>
 <link rel="next" href="how-does-the-proportion-affect-the-margin-of-error.html"/>
-<script src="libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -134,31 +132,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html#welcome-to-lab-5" id="toc-welcome-to-lab-5">Welcome to Lab 5<span></span></a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Lab 5</a>
 <ul>
-<li><a href="index.html#intended-learning-outcomes" id="toc-intended-learning-outcomes">Intended Learning Outcomes<span></span></a></li>
-<li><a href="index.html#credit-where-credit-is-due" id="toc-credit-where-credit-is-due">Credit where credit is due<span></span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#intended-learning-outcomes"><i class="fa fa-check"></i>Intended Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#credit-where-credit-is-due"><i class="fa fa-check"></i>Credit where credit is due</a></li>
 </ul></li>
-<li><a href="data.html#data" id="toc-data">Data<span></span></a></li>
-<li><a href="inference-for-categorical-data.html#inference-for-categorical-data" id="toc-inference-for-categorical-data">Inference for Categorical Data<span></span></a>
+<li class="chapter" data-level="" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i>Data</a></li>
+<li class="chapter" data-level="" data-path="inference-for-categorical-data.html"><a href="inference-for-categorical-data.html"><i class="fa fa-check"></i>Inference for Categorical Data</a>
 <ul>
-<li><a href="inference-for-categorical-data.html#exercise-1" id="toc-exercise-1">Exercise 1<span></span></a></li>
-<li><a href="inference-for-categorical-data.html#exercise-2" id="toc-exercise-2">Exercise 2<span></span></a></li>
+<li class="chapter" data-level="" data-path="inference-for-categorical-data.html"><a href="inference-for-categorical-data.html#exercise-1"><i class="fa fa-check"></i>Exercise 1</a></li>
+<li class="chapter" data-level="" data-path="inference-for-categorical-data.html"><a href="inference-for-categorical-data.html#exercise-2"><i class="fa fa-check"></i>Exercise 2</a></li>
 </ul></li>
-<li><a href="inference-on-proportions.html#inference-on-proportions" id="toc-inference-on-proportions">Inference on Proportions<span></span></a>
+<li class="chapter" data-level="" data-path="inference-on-proportions.html"><a href="inference-on-proportions.html"><i class="fa fa-check"></i>Inference on Proportions</a>
 <ul>
-<li><a href="inference-on-proportions.html#exercise-3" id="toc-exercise-3">Exercise 3<span></span></a></li>
-<li><a href="inference-on-proportions.html#exercise-4" id="toc-exercise-4">Exercise 4<span></span></a></li>
-<li><a href="inference-on-proportions.html#exercise-5" id="toc-exercise-5">Exercise 5<span></span></a></li>
+<li class="chapter" data-level="" data-path="inference-on-proportions.html"><a href="inference-on-proportions.html#calculating-confidence-intervals-cis-for-proportions"><i class="fa fa-check"></i>Calculating Confidence Intervals (CIs) for proportions</a></li>
+<li class="chapter" data-level="" data-path="inference-on-proportions.html"><a href="inference-on-proportions.html#exercise-3"><i class="fa fa-check"></i>Exercise 3</a></li>
+<li class="chapter" data-level="0.0.1" data-path="inference-on-proportions.html"><a href="inference-on-proportions.html#margin-of-error"><i class="fa fa-check"></i><b>0.0.1</b> Margin of Error</a></li>
+<li class="chapter" data-level="" data-path="inference-on-proportions.html"><a href="inference-on-proportions.html#exercise-4"><i class="fa fa-check"></i>Exercise 4</a></li>
+<li class="chapter" data-level="" data-path="inference-on-proportions.html"><a href="inference-on-proportions.html#exercise-5"><i class="fa fa-check"></i>Exercise 5</a></li>
 </ul></li>
-<li><a href="how-does-the-proportion-affect-the-margin-of-error.html#how-does-the-proportion-affect-the-margin-of-error" id="toc-how-does-the-proportion-affect-the-margin-of-error">How does the proportion affect the margin of error?<span></span></a></li>
-<li><a href="success-failure-condition.html#success-failure-condition" id="toc-success-failure-condition">Success-failure condition<span></span></a></li>
-<li><a href="group-tasks.html#group-tasks" id="toc-group-tasks">Group Tasks<span></span></a>
+<li class="chapter" data-level="" data-path="how-does-the-proportion-affect-the-margin-of-error.html"><a href="how-does-the-proportion-affect-the-margin-of-error.html"><i class="fa fa-check"></i>How does the proportion affect the margin of error?</a></li>
+<li class="chapter" data-level="" data-path="success-failure-condition.html"><a href="success-failure-condition.html"><i class="fa fa-check"></i>Success-failure condition</a>
 <ul>
-<li><a href="group-tasks.html#task-1" id="toc-task-1">Task 1<span></span></a></li>
-<li><a href="group-tasks.html#task-2" id="toc-task-2">Task 2<span></span></a></li>
-<li><a href="group-tasks.html#task-3" id="toc-task-3">Task 3<span></span></a></li>
-<li><a href="group-tasks.html#task-4" id="toc-task-4">Task 4<span></span></a></li>
+<li class="chapter" data-level="" data-path="success-failure-condition.html"><a href="success-failure-condition.html#exercise-6"><i class="fa fa-check"></i>Exercise 6</a></li>
+<li class="chapter" data-level="" data-path="success-failure-condition.html"><a href="success-failure-condition.html#exercise-7"><i class="fa fa-check"></i>Exercise 7</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html"><i class="fa fa-check"></i>Group Tasks</a>
+<ul>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-1"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-2"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-3"><i class="fa fa-check"></i>Task 3</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-4"><i class="fa fa-check"></i>Task 4</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-5"><i class="fa fa-check"></i>Task 5</a></li>
 </ul></li>
 </ul>
 
@@ -180,44 +185,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="inference-on-proportions" class="section level1 unnumbered hasAnchor">
 <h1>Inference on Proportions<a href="inference-on-proportions.html#inference-on-proportions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The Center for Disease Control and Prevention seeks to report the proportion of people who have texted while driving each day for the past 30 days.</p>
-<p>To do this, you can answer the question, "What proportion of people in your sample reported that they have texted while driving each day for the past 30 days?" with a <strong>statistic</strong>; while the question "What proportion of people on earth have texted while driving each day for the past 30 days?" is answered with an <strong>estimate of the parameter</strong>.</p>
-<p>The inferential tools for estimating population proportion are analogous to those used for means in the last Lab: the confidence interval and the hypothesis test.</p>
+<p>To do this, you can answer the question, "What proportion of people in your sample reported that they have texted while driving each day for the past 30 days?" with a <strong>sample statistic</strong>; while the question "What proportion of people in the general population have texted while driving each day for the past 30 days?" is answered with an <strong>estimate of the population parameter</strong>.</p>
+<p>The inferential tools for estimating population proportions are: confidence intervals and the hypothesis tests.</p>
 <p><br></p>
+<div id="calculating-confidence-intervals-cis-for-proportions" class="section level3 unnumbered hasAnchor">
+<h3>Calculating Confidence Intervals (CIs) for proportions<a href="inference-on-proportions.html#calculating-confidence-intervals-cis-for-proportions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Recall <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=181" target="_blank">from page 181 of OpenIntro</a> that the 95% Confidence Interval for a proportion is given by <span class="math display">\[\hat{p} \pm 1.96*SE\]</span> where <span class="math inline">\(SE = \textrm{Standard Error} = \sqrt\frac{p(1-p)}{n}\)</span>. The standard error in CIs is estimated by replacing <span class="math inline">\(p\)</span> with its estimate <span class="math inline">\(\hat{p}\)</span>.</p>
+<p>Here <span class="math inline">\(n\)</span> is the sample size, 4344 in the <code>yrbss</code> data, and the critical value z equals 1.96 for the standard 95% confidence interval.</p>
+<p>We can use R as a calculator with <code>*</code> being the multiplying operator, <code>/</code> being the dividing operator and <code>sqrt()</code> being the square root operator.</p>
+</div>
 <div id="exercise-3" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 3<a href="inference-on-proportions.html#exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Construct a confidence interval for the proportion of people who reported that they have texted while driving each day for the past 30 days.</p>
-<p>Recall <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=181" target="_blank">from page 181 of OpenIntro</a> that the 95% Confidence Interval for a proportion is given by <span class="math display">\[\hat{p} \pm 1.96*SE\]</span> where <span class="math inline">\(SE = \textrm{Standard Error} = \sqrt\frac{p(1-p)}{n}\)</span>. The standard error is estimated by replacing <span class="math inline">\(p\)</span> with its estimate <span class="math inline">\(\hat{p}\)</span>.</p>
-<p>Here <span class="math inline">\(n\)</span> is the sample size, 4344 in this case, and the critical value z equals 1.96 for the standard 95% confidence interval.</p>
-<p>As mentioned in the first lab, <code>R</code> can act like a calculator in the usual way, with <code>*</code> being the multiplying operator, <code>/</code> being the dividing operator and <code>sqrt()</code> being the square root operator.</p>
-<p>You have done this previously in Lab 4 to estimate the proportion of US adults who think climate change affects their local community.</p>
-<p>You can use your answer from the previous question to help you do this.</p>
+<p>Construct a confidence interval (CI) for the proportion of non-helmet wearing students (in the general population) who have texted while driving each day for the past 30 days.</p>
 <div class="webex-solution">
 <button>
 Hint
 </button>
-<p>First calculate an estimate <code>p</code> for the proportion of people who have texted while driving each day (look at the output from Exercise 2 for the relevant numbers). The upper and lower bounds can then be calculated as <code>p + 1.96*sqrt(p*(1-p)/n)</code> and <code>p - 1.96*sqrt(p*(1-p)/n)</code>.</p>
+<p>First calculate a point estimate <code>p</code> for the proportion of non-helmet wearing students (in the general population) who have texted while driving each day (look at the output from Exercise 2 for the relevant numbers). The upper and lower bounds can then be calculated as <code>p + 1.96*sqrt(p*(1-p)/n)</code> and <code>p - 1.96*sqrt(p*(1-p)/n)</code>.</p>
 </div>
 <div class="webex-solution">
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="inference-on-proportions.html#cb8-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">332</span><span class="sc">/</span>(<span class="dv">332</span><span class="sc">+</span><span class="dv">4012</span>)</span>
-<span id="cb8-2"><a href="inference-on-proportions.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="inference-on-proportions.html#cb8-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">332</span><span class="sc">+</span><span class="dv">4012</span></span>
-<span id="cb8-4"><a href="inference-on-proportions.html#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="inference-on-proportions.html#cb8-5" aria-hidden="true" tabindex="-1"></a>upper.bound <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
-<span id="cb8-6"><a href="inference-on-proportions.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="inference-on-proportions.html#cb8-7" aria-hidden="true" tabindex="-1"></a>lower.bound <span class="ot">&lt;-</span> p <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
-<span id="cb8-8"><a href="inference-on-proportions.html#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="inference-on-proportions.html#cb8-9" aria-hidden="true" tabindex="-1"></a>lower.bound</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="inference-on-proportions.html#cb14-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">332</span><span class="sc">/</span>(<span class="dv">332</span><span class="sc">+</span><span class="dv">4012</span>)</span>
+<span id="cb14-2"><a href="inference-on-proportions.html#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="inference-on-proportions.html#cb14-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">332</span><span class="sc">+</span><span class="dv">4012</span></span>
+<span id="cb14-4"><a href="inference-on-proportions.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="inference-on-proportions.html#cb14-5" aria-hidden="true" tabindex="-1"></a>upper.bound <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
+<span id="cb14-6"><a href="inference-on-proportions.html#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="inference-on-proportions.html#cb14-7" aria-hidden="true" tabindex="-1"></a>lower.bound <span class="ot">&lt;-</span> p <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
+<span id="cb14-8"><a href="inference-on-proportions.html#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="inference-on-proportions.html#cb14-9" aria-hidden="true" tabindex="-1"></a>lower.bound</span></code></pre></div>
 <pre><code>## [1] 0.06852646</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="inference-on-proportions.html#cb10-1" aria-hidden="true" tabindex="-1"></a>upper.bound</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="inference-on-proportions.html#cb16-1" aria-hidden="true" tabindex="-1"></a>upper.bound</span></code></pre></div>
 <pre><code>## [1] 0.08432805</code></pre>
 </div>
 <p><br></p>
 <strong>What could you interpret from this confidence interval?</strong>
-<div id="radio_RSSJPBJFBN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RSSJPBJFBN" value=""></input> <span>We are 90% confident the true proportion of non-helmet wearing students that texted while driving in all 30 of the previous 30 days is somewhere between 0.069 and 0.084.</span></label><label><input type="radio" autocomplete="off" name="radio_RSSJPBJFBN" value="answer"></input> <span>We are 95% confident the true proportion of non-helmet wearing students that texted while driving in all 30 of the previous 30 days is somewhere between 0.069 and 0.084.</span></label><label><input type="radio" autocomplete="off" name="radio_RSSJPBJFBN" value=""></input> <span>The proportion we calculated in outside of the interval calculated here, therefore we cannot make any valid interpretations.</span></label><label><input type="radio" autocomplete="off" name="radio_RSSJPBJFBN" value=""></input> <span>We are 95% confident the true proportion of non-helmet wearing students that texted while driving in all 30 of the previous 30 days is exactly 0.076, since this is inside the confidence interval.</span></label>
+<div id="radio_DGWQZLUOUG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DGWQZLUOUG" value=""></input> <span>The proportion we calculated in outside of the interval calculated here, therefore we cannot make any valid interpretations.</span></label><label><input type="radio" autocomplete="off" name="radio_DGWQZLUOUG" value=""></input> <span>We are 95% confident the true proportion of non-helmet wearing students that texted while driving in all 30 of the previous 30 days is exactly 0.076, since this is inside the confidence interval.</span></label><label><input type="radio" autocomplete="off" name="radio_DGWQZLUOUG" value="answer"></input> <span>We are 95% confident the true proportion of non-helmet wearing students that texted while driving in all 30 of the previous 30 days is somewhere between 0.069 and 0.084.</span></label><label><input type="radio" autocomplete="off" name="radio_DGWQZLUOUG" value=""></input> <span>We are 90% confident the true proportion of non-helmet wearing students that texted while driving in all 30 of the previous 30 days is somewhere between 0.069 and 0.084.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -227,21 +233,24 @@ Hint
 </div>
 <p><br></p>
 </div>
-<div id="exercise-4" class="section level3 unnumbered hasAnchor">
-<h3>Exercise 4<a href="inference-on-proportions.html#exercise-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>What is the <strong>margin of error</strong> for the estimate of the proportion of non-helmet wearers that have texted while driving each day for the past 30 days based on this survey?</p>
+<div id="margin-of-error" class="section level3 hasAnchor" number="0.0.1">
+<h3><span class="header-section-number">0.0.1</span> Margin of Error<a href="inference-on-proportions.html#margin-of-error" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Recall that the margin of error is half the width of a confidence interval.</p>
 <p>Referring back to the previous question, the margin of error is simply</p>
 <p><span class="math display">\[ME = z*SE = z \sqrt\frac{p(1-p)}{n}\]</span> and for a standard 95% CI, <span class="math display">\[= 1.96 \sqrt\frac{p(1-p)}{n}\]</span></p>
 <p><br></p>
-<p><strong>What is the margin or error for the proportion in question?</strong> <em>(to 3 decimal places)</em></p>
+</div>
+<div id="exercise-4" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 4<a href="inference-on-proportions.html#exercise-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What is the <strong>margin of error</strong> for the estimate of the proportion of non-helmet wearers that have texted while driving each day for the past 30 days based on this survey? <em>(to 3 decimal places)</em></p>
 <p><input class='webex-solveme nospaces' size='5' data-answer='["0.008",".008"]'/></p>
 <div class="webex-solution">
 <button>
 Hint
 </button>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="inference-on-proportions.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#calculate the margin of error in R using the code</span></span>
-<span id="cb12-2"><a href="inference-on-proportions.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="inference-on-proportions.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="inference-on-proportions.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#calculate the margin of error in R using the code</span></span>
+<span id="cb18-2"><a href="inference-on-proportions.html#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="inference-on-proportions.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span></code></pre></div>
 </div>
 <p><br></p>
 </div>
@@ -249,11 +258,11 @@ Hint
 <h3>Exercise 5<a href="inference-on-proportions.html#exercise-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Using the same method as seen above, repeat the process of constructing a confidence interval for the proportion of students who never wore a bike helmet and</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Had less than 5 hours sleep, then</p></li>
+<li><p>Had less than 5 hours sleep,</p></li>
 <li><p>Strength trained every day,</p></li>
 </ol>
-<p>instead of texted while driving every day of the past 30 days. You should construct two confidence intervals, one for a) and one for b).</p>
-<p>You will need to answer the problem in two steps. Firstly, to construct a new "yes" or "no" variable, by adapting the below code and considering which variable to change and which category of that variable to change also i.e. what the <code>==</code> part equals. Secondly, you will need to construct a confidence interval in the same way as above, by working out your new <span class="math inline">\(p\)</span> and <span class="math inline">\(n\)</span> values using the same methods as before.</p>
+<p>instead of "texted while driving every day of the past 30 days". You should construct two confidence intervals, one for a) and one for b).</p>
+<p>You will need to answer the problem in two steps. Firstly, construct a new "yes" or "no" variable, by adapting some code above and considering which variable to change and which category of that variable to change also i.e. what the <code>==</code> part equals. Secondly, you will need to construct a confidence interval in the same way as above, by working out your new <span class="math inline">\(p\)</span> and <span class="math inline">\(n\)</span> values using the same methods as before.</p>
 <div class="webex-solution">
 <button>
 Hint
@@ -264,28 +273,28 @@ Hint
 <button>
 Solution (a)
 </button>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="inference-on-proportions.html#cb13-1" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="ot">&lt;-</span> no_helmet <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="inference-on-proportions.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">less5_hours_sleep =</span> <span class="fu">ifelse</span>(school_night_hours_sleep <span class="sc">==</span> <span class="st">&quot;&lt;5&quot;</span>, <span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</span>
-<span id="cb13-3"><a href="inference-on-proportions.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="inference-on-proportions.html#cb13-4" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="sc">%&gt;%</span></span>
-<span id="cb13-5"><a href="inference-on-proportions.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(less5_hours_sleep) <span class="sc">%&gt;%</span></span>
-<span id="cb13-6"><a href="inference-on-proportions.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="inference-on-proportions.html#cb19-1" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="ot">&lt;-</span> no_helmet <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="inference-on-proportions.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">less5_hours_sleep =</span> <span class="fu">ifelse</span>(school_night_hours_sleep <span class="sc">==</span> <span class="st">&quot;&lt;5&quot;</span>, <span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</span>
+<span id="cb19-3"><a href="inference-on-proportions.html#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="inference-on-proportions.html#cb19-4" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="sc">%&gt;%</span></span>
+<span id="cb19-5"><a href="inference-on-proportions.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(less5_hours_sleep) <span class="sc">%&gt;%</span></span>
+<span id="cb19-6"><a href="inference-on-proportions.html#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 2
 ##   less5_hours_sleep count
 ##   &lt;chr&gt;             &lt;int&gt;
 ## 1 no                 4022
 ## 2 yes                 322</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="inference-on-proportions.html#cb15-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">322</span><span class="sc">/</span>(<span class="dv">322</span><span class="sc">+</span><span class="dv">4022</span>)</span>
-<span id="cb15-2"><a href="inference-on-proportions.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="inference-on-proportions.html#cb15-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">322</span><span class="sc">+</span><span class="dv">4022</span></span>
-<span id="cb15-4"><a href="inference-on-proportions.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="inference-on-proportions.html#cb15-5" aria-hidden="true" tabindex="-1"></a>upper.bound <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
-<span id="cb15-6"><a href="inference-on-proportions.html#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="inference-on-proportions.html#cb15-7" aria-hidden="true" tabindex="-1"></a>lower.bound <span class="ot">&lt;-</span> p <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
-<span id="cb15-8"><a href="inference-on-proportions.html#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="inference-on-proportions.html#cb15-9" aria-hidden="true" tabindex="-1"></a>lower.bound</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="inference-on-proportions.html#cb21-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">322</span><span class="sc">/</span>(<span class="dv">322</span><span class="sc">+</span><span class="dv">4022</span>)</span>
+<span id="cb21-2"><a href="inference-on-proportions.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="inference-on-proportions.html#cb21-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">322</span><span class="sc">+</span><span class="dv">4022</span></span>
+<span id="cb21-4"><a href="inference-on-proportions.html#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="inference-on-proportions.html#cb21-5" aria-hidden="true" tabindex="-1"></a>upper.bound <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
+<span id="cb21-6"><a href="inference-on-proportions.html#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="inference-on-proportions.html#cb21-7" aria-hidden="true" tabindex="-1"></a>lower.bound <span class="ot">&lt;-</span> p <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
+<span id="cb21-8"><a href="inference-on-proportions.html#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="inference-on-proportions.html#cb21-9" aria-hidden="true" tabindex="-1"></a>lower.bound</span></code></pre></div>
 <pre><code>## [1] 0.06633464</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="inference-on-proportions.html#cb17-1" aria-hidden="true" tabindex="-1"></a>upper.bound</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="inference-on-proportions.html#cb23-1" aria-hidden="true" tabindex="-1"></a>upper.bound</span></code></pre></div>
 <pre><code>## [1] 0.08191582</code></pre>
 </div>
 <p><br></p>
@@ -299,34 +308,34 @@ Hint
 <button>
 Solution (b)
 </button>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="inference-on-proportions.html#cb19-1" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="ot">&lt;-</span> no_helmet <span class="sc">%&gt;%</span></span>
-<span id="cb19-2"><a href="inference-on-proportions.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">train_every_day =</span> <span class="fu">ifelse</span>(physically_active_7d<span class="sc">==</span><span class="dv">7</span>,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>))</span>
-<span id="cb19-3"><a href="inference-on-proportions.html#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="inference-on-proportions.html#cb19-4" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="sc">%&gt;%</span></span>
-<span id="cb19-5"><a href="inference-on-proportions.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(train_every_day) <span class="sc">%&gt;%</span></span>
-<span id="cb19-6"><a href="inference-on-proportions.html#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="inference-on-proportions.html#cb25-1" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="ot">&lt;-</span> no_helmet <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="inference-on-proportions.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">train_every_day =</span> <span class="fu">ifelse</span>(physically_active_7d<span class="sc">==</span><span class="dv">7</span>,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>))</span>
+<span id="cb25-3"><a href="inference-on-proportions.html#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="inference-on-proportions.html#cb25-4" aria-hidden="true" tabindex="-1"></a>no_helmet <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="inference-on-proportions.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(train_every_day) <span class="sc">%&gt;%</span></span>
+<span id="cb25-6"><a href="inference-on-proportions.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 2
 ##   train_every_day count
 ##   &lt;chr&gt;           &lt;int&gt;
 ## 1 no               3014
 ## 2 yes              1330</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="inference-on-proportions.html#cb21-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">1330</span><span class="sc">/</span>(<span class="dv">1330</span><span class="sc">+</span><span class="dv">3014</span>)</span>
-<span id="cb21-2"><a href="inference-on-proportions.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="inference-on-proportions.html#cb21-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1330</span><span class="sc">+</span><span class="dv">3014</span></span>
-<span id="cb21-4"><a href="inference-on-proportions.html#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="inference-on-proportions.html#cb21-5" aria-hidden="true" tabindex="-1"></a>upper.bound <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
-<span id="cb21-6"><a href="inference-on-proportions.html#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="inference-on-proportions.html#cb21-7" aria-hidden="true" tabindex="-1"></a>lower.bound <span class="ot">&lt;-</span> p <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
-<span id="cb21-8"><a href="inference-on-proportions.html#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-9"><a href="inference-on-proportions.html#cb21-9" aria-hidden="true" tabindex="-1"></a>lower.bound</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="inference-on-proportions.html#cb27-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">1330</span><span class="sc">/</span>(<span class="dv">1330</span><span class="sc">+</span><span class="dv">3014</span>)</span>
+<span id="cb27-2"><a href="inference-on-proportions.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="inference-on-proportions.html#cb27-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1330</span><span class="sc">+</span><span class="dv">3014</span></span>
+<span id="cb27-4"><a href="inference-on-proportions.html#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="inference-on-proportions.html#cb27-5" aria-hidden="true" tabindex="-1"></a>upper.bound <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
+<span id="cb27-6"><a href="inference-on-proportions.html#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="inference-on-proportions.html#cb27-7" aria-hidden="true" tabindex="-1"></a>lower.bound <span class="ot">&lt;-</span> p <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)<span class="sc">/</span>n)</span>
+<span id="cb27-8"><a href="inference-on-proportions.html#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="inference-on-proportions.html#cb27-9" aria-hidden="true" tabindex="-1"></a>lower.bound</span></code></pre></div>
 <pre><code>## [1] 0.2924632</code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="inference-on-proportions.html#cb23-1" aria-hidden="true" tabindex="-1"></a>upper.bound</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="inference-on-proportions.html#cb29-1" aria-hidden="true" tabindex="-1"></a>upper.bound</span></code></pre></div>
 <pre><code>## [1] 0.3198757</code></pre>
 </div>
 <p><br></p>
 <strong>How could you compare the two CI for proportions calculated above?</strong>
-<div id="radio_ZDWBFTNBDR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZDWBFTNBDR" value=""></input> <span>We can make no comparisons between the two groups whatsoever at this stage of the analysis.</span></label><label><input type="radio" autocomplete="off" name="radio_ZDWBFTNBDR" value="answer"></input> <span>The proportion of non helmet wearing strength trainers is probably much greater than the proportion of non-helmet wearing people with less than 5 hours sleep, since the CI is far above.</span></label><label><input type="radio" autocomplete="off" name="radio_ZDWBFTNBDR" value=""></input> <span>The CI for the proportion of non-helmet wearing strength trainers seems far wider than the CI for the proportion of non-helmet wearing students with less than 5 hours sleep.</span></label><label><input type="radio" autocomplete="off" name="radio_ZDWBFTNBDR" value=""></input> <span>The proportion of non-helmet wearing strength trainers probably equals the proportion of non-helmet wearing students that gets less than 5 hours sleep.</span></label>
+<div id="radio_PYGCMDONFT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PYGCMDONFT" value="answer"></input> <span>The proportion of non helmet wearing strength trainers is probably much greater than the proportion of non-helmet wearing people with less than 5 hours sleep, since the CI is far above.</span></label><label><input type="radio" autocomplete="off" name="radio_PYGCMDONFT" value=""></input> <span>The proportion of non-helmet wearing strength trainers probably equals the proportion of non-helmet wearing students that gets less than 5 hours sleep.</span></label><label><input type="radio" autocomplete="off" name="radio_PYGCMDONFT" value=""></input> <span>We can make no comparisons between the two groups whatsoever at this stage of the analysis.</span></label><label><input type="radio" autocomplete="off" name="radio_PYGCMDONFT" value=""></input> <span>The CI for the proportion of non-helmet wearing strength trainers seems far wider than the CI for the proportion of non-helmet wearing students with less than 5 hours sleep.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -574,7 +583,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
