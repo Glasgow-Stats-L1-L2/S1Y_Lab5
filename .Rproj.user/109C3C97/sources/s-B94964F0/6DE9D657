@@ -3,7 +3,7 @@
     "path": "C:/Users/mtb3f/OneDrive - University of Glasgow/Stats Level 1/Github_Bookdown_Labs/2022/S1Y_Lab5/06-group-tasks.Rmd",
     "project_path": "06-group-tasks.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "3214327254",
     "contents": "",
     "dirty": false,
     "created": 1668616709023.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "72,0",
+        "cursorPosition": "66,10",
         "scrollLine": "53"
     },
     "folds": "",
-    "lastKnownWriteTime": 1668617698,
+    "lastKnownWriteTime": 1668618087,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1668617698722,
+    "last_content_update": 1668618087050,
     "read_only": false,
     "read_only_alternatives": []
 }

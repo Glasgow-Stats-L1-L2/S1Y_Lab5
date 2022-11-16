@@ -56,7 +56,6 @@ opts_Task3 <- sample(c("The two confidence intervals overlap, therefore there is
 
 `r longmcq(opts_Task3)`
 
-### Task 4 {-}
 
 **If in reality there has been no change in the atheism index in *any* of the countries, in how many of the countries would you expect to detect a change (at a significance level of 0.05) simply by chance?** *(to the nearest whole number)*
 `r fitb(3)`
@@ -65,7 +64,7 @@ opts_Task3 <- sample(c("The two confidence intervals overlap, therefore there is
 We need to take the probability of a Type 1 error (rejecting the null hypothesis when $H_0$ is actually true) and times it by 57 (the number of countries within `atheism`). The probability of a Type 1 error is simply the significance level alpha, in this case, 0.05.
 `r unhide()`
 
-### Task 5 {-}
+### Task 4 {-}
 
 Suppose you’re hired by the local government to estimate the proportion of residents that attend a religious service on a weekly basis. According to the guidelines, the estimate must have a margin of error no greater than 1% with 95% confidence. You have no idea what to expect for $p$, so assume $p=0.5$. Use `R` as a calculator to determine how many people would you have to sample to ensure that you are within the guidelines?
 
